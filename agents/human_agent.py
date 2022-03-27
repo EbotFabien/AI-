@@ -9,7 +9,6 @@ class HumanAgent(Agent):
     def __init__(self):
         super(HumanAgent, self).__init__()
         self.name = "HumanAgent"
-        self.autoplay = True
         self.dir_map = {
             "u": 0,
             "r": 1,

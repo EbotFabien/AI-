@@ -24,32 +24,3 @@ def all_logging_disabled(highest_level=logging.CRITICAL):
         yield
     finally:
         logging.disable(previous_level)
-
-
-'''if final_steps == None or bar == None:
-            if self.recurs > 0:
-                self.recurs-=1
-                if final_steps == None:
-                    final_steps = np.random.randint(0, max_step + 1)
-                    mov_dir = np.random.randint(0, 4)
-                    pos=(x+final_steps,y)
-                    if self.boundary(pos,chess_board) == False:
-                        if self.check_lock(chess_board,x,y) == True:
-                            self.search_best_move(sort,my_pos,max_step,chess_board)
-                    pos=(x-final_steps,y)
-                    if self.boundary(pos,chess_board) == False:
-                        if self.check_lock(chess_board,x,y) == True:
-                            self.search_best_move(sort,my_pos,max_step,chess_board)
-                    pos=(x,y-final_steps)
-                    if self.boundary(pos,chess_board) == False:
-                        if self.check_lock(chess_board,x,y) == True:
-                            self.search_best_move(sort,my_pos,max_step,chess_board)
-                    pos=(x,y+final_steps)
-                    if self.boundary(pos,chess_board) == False:
-                        if self.check_lock(chess_board,x,y) == True:
-                            self.search_best_move(sort,my_pos,max_step,chess_board)
-                if bar == None:
-                    bar = np.random.randint(0, 4)
-                    while self.check_barrier(chess_board,x,y,bar):
-                        bar = np.random.randint(0, 4)
-'''

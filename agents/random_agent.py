@@ -14,9 +14,6 @@ class RandomAgent(Agent):
         super(RandomAgent, self).__init__()
         self.name = "RandomAgent"
         self.autoplay = True
-        
-
-    
 
     def step(self, chess_board, my_pos, adv_pos, max_step):
         # Moves (Up, Right, Down, Left)
@@ -30,7 +27,7 @@ class RandomAgent(Agent):
             dir = np.random.randint(0, 4)
             m_r, m_c = moves[dir]
             my_pos = (r + m_r, c + m_c)
-            #print(chess_board[r, c, dir])
+
             # Special Case enclosed by Adversary
             k = 0
             while chess_board[r, c, dir] or my_pos == adv_pos:
@@ -44,13 +41,11 @@ class RandomAgent(Agent):
             if k > 300:
                 my_pos = ori_pos
                 break
-  
+
         # Put Barrier
         dir = np.random.randint(0, 4)
         r, c = my_pos
         while chess_board[r, c, dir]:
             dir = np.random.randint(0, 4)
-        
-            
 
         return my_pos, dir
